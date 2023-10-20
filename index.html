@@ -11,17 +11,21 @@
 
 <body>
     <header>
-        <div id="high-scores">View High Scores</div>
+        <div class="scores">
+            <a id="high-scores-link" href="#">View High Scores</a>
+        </div>
+        
         <div id="timer">Timer: 75</div>
     </header>
-    
+
         <div id="intro">
             <h2>Try to answer the following code-related questions within the time limit.<br>
                 Keep in mind that incorrect answers will penalize your scoretime by ten seconds!</h2>
             <button id="start-btn">Start Quiz</button>
         </div>
 
-        <div id="questions-container">
+        <div id="questions-container" style="display: none;">
+        
         <h1 id="questions">Question</h1>
             <div id="answer-btns">
             <button class="btn">Answer 1</button>
@@ -29,16 +33,27 @@
             <button class="btn">Answer 3</button>
             <button class="btn">Answer 4</button>
             </div>
+            <p id="answer-feedback"></p>
         </div>
 
-        <div id="scores">
+        <div id="scores" style="display: none;">
         <form id="submit-scores">
             <h4 id="personal-score"></h4>
             <label id="initials-score">Enter Initials:</label>
             <input type="text" id="initials-field" maxlength="3" />
             <button id="submit-btn">Submit</button>
-        
+ 
         </form>
+        <p id="final-score">Your Score: 0</p>
+        </div>
+
+        <div id="leaderboard" style="display: none;">
+            <h1>Leaderboard</h1>
+            <ul id="score-list">
+                
+            </ul>
+            <button id="clear-scores-btn">Clear Scores</button>
+            <button id="restart-btn">Restart</button>
         </div>
 
 
